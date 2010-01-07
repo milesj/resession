@@ -1,0 +1,17 @@
+Resession - Session Management
+******************************
+
+Requirements
+============
+
+	* PHP 5.2.x
+
+Documentation
+=============
+
+	* http://www.milesj.me/resources/script/session-manager
+
+Installation
+============
+
+	* Include the class file (session.php) and statically call the methods
