@@ -1,21 +1,19 @@
 <?php
 /**
- * session.php
+ * Resession - Session Manager
  *
  * Manages all session data and interactions
  * 
  * @author 		Miles Johnson - www.milesj.me
  * @copyright	Copyright 2006-2009, Miles Johnson, Inc.
  * @license 	http://www.opensource.org/licenses/mit-license.php - Licensed under The MIT License
- * @package     Resession - Session Manager
- * @version     1.9
  * @link		www.milesj.me/resources/script/session-manager
  */
 
 class Session {
 
 	/**
-	 * Current version: www.milesj.me/files/logs/session-manager
+	 * Current version: www.milesj.me/resources/logs/session-manager
 	 *
 	 * @access public
 	 * @var string
