@@ -5,7 +5,7 @@
  * @author 		Miles Johnson - http://milesj.me
  * @copyright	Copyright 2006-2011, Miles Johnson, Inc.
  * @license 	http://opensource.org/licenses/mit-license.php - Licensed under The MIT License
- * @link		http://milesj.me/resources/script/session-manager
+ * @link		http://milesj.me/resources/script/resession
  */
 
 class Resession {
@@ -18,7 +18,7 @@ class Resession {
 	const SECURITY_HIGH = 3;
 
 	/**
-	 * Current version: http://milesj.me/resources/logs/session-manager
+	 * Current version.
 	 *
 	 * @access public
 	 * @var string
