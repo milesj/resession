@@ -164,15 +164,19 @@ class Resession {
 	 * @param string $key
 	 * @return mixed
 	 */
-	public function get($key) {
+	public function get($key = null) {
 		$this->validate();
 
-		if (strpos($key, '.')) {
+		if (empty($key)) {
+			return $_SESSION;
+
+		} else if (strpos($key, '.')) {
 			$keys = explode('.', $key);
 
 			if (isset($_SESSION[$keys[0]][$keys[1]])) {
 				return $_SESSION[$keys[0]][$keys[1]];
 			}
+			
 		} else if (isset($_SESSION[$key])) {
 			return $_SESSION[$key];
 		}
