@@ -19,4 +19,4 @@ A class that manages and manipulates session data. Upon class instantiation all 
 
 ## Documentation ##
 
-Thorough documentation can be found here: http://milesj.me/resources/script/resession
+Thorough documentation can be found here: http://milesj.me/code/php/resession
