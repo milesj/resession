@@ -1,11 +1,13 @@
 <?php
 /**
- * Resession - Manages and manipulates session data with built in security.
+ * Resession
+ *
+ * Manages and manipulates session data with built in security.
  *
  * @author 		Miles Johnson - http://milesj.me
  * @copyright	Copyright 2006-2011, Miles Johnson, Inc.
  * @license 	http://opensource.org/licenses/mit-license.php - Licensed under The MIT License
- * @link		http://milesj.me/resources/script/resession
+ * @link		http://milesj.me/code/php/resession
  */
 
 // Turn on errors
@@ -16,7 +18,7 @@ function debug($var) {
 }
 
 // Include class and instantiate
-include_once 'resession/Resession.php';
+include_once '../resession/Resession.php';
 
 $session = new Resession(array(
 	'security' => Resession::SECURITY_HIGH
