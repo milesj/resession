@@ -3,7 +3,8 @@
  * Resession
  *
  * Manages and manipulates session data with built in security.
- * 
+ *
+ * @version		2.1
  * @author 		Miles Johnson - http://milesj.me
  * @copyright	Copyright 2006-2011, Miles Johnson, Inc.
  * @license 	http://opensource.org/licenses/mit-license.php - Licensed under The MIT License
@@ -25,7 +26,7 @@ class Resession {
 	 * @access public
 	 * @var string
 	 */
-	public $version = '2.0';
+	public $version = '2.1';
 
 	/**
 	 * Holds the user agent of the client.
@@ -60,7 +61,6 @@ class Resession {
 	 *
 	 * @access private
 	 * @param array $config
-	 * @return void
 	 */
 	public function __construct(array $config = array()) {
 		$this->_config = $config + $this->_config;
@@ -120,8 +120,9 @@ class Resession {
 	 * Removes an array of values or a single value.
 	 *
 	 * @access public
-	 * @param array|string $keys
-	 * @return this
+	 * @param array|string $key
+	 * @return Resession
+	 * @chainable
 	 */
 	public function clear($key) {
 		$this->validate();
@@ -178,7 +179,7 @@ class Resession {
 			if (isset($_SESSION[$keys[0]][$keys[1]])) {
 				return $_SESSION[$keys[0]][$keys[1]];
 			}
-			
+
 		} else if (isset($_SESSION[$key])) {
 			return $_SESSION[$key];
 		}
@@ -223,7 +224,8 @@ class Resession {
 	 * @access public
 	 * @param string $key
 	 * @param mixed $value
-	 * @return this
+	 * @return Resession
+	 * @chainable
 	 */
 	public function set($key, $value) {
 		$this->validate();
@@ -250,7 +252,7 @@ class Resession {
 	 * @return void
 	 */
 	public function validate() {
-		if ($this->_config['security'] == self::SECURITY_HIGH && $this->_agent != md5($_SERVER['HTTP_USER_AGENT'])) {
+		if ($this->_config['security'] === self::SECURITY_HIGH && $this->_agent !== md5($_SERVER['HTTP_USER_AGENT'])) {
 			$this->destroy();
 			$this->regenerate(true);
 		}
