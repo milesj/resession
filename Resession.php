@@ -4,7 +4,7 @@
  *
  * Manages and manipulates session data with built in security.
  *
- * @version		2.1
+ * @version		2.1.1
  * @author 		Miles Johnson - http://milesj.me
  * @copyright	Copyright 2006-2011, Miles Johnson, Inc.
  * @license 	http://opensource.org/licenses/mit-license.php - Licensed under The MIT License
@@ -19,14 +19,6 @@ class Resession {
 	const SECURITY_LOW = 0;
 	const SECURITY_MEDIUM = 1;
 	const SECURITY_HIGH = 3;
-
-	/**
-	 * Current version.
-	 *
-	 * @access public
-	 * @var string
-	 */
-	public $version = '2.1';
 
 	/**
 	 * Holds the user agent of the client.
