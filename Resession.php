@@ -10,7 +10,7 @@ namespace mjohnson\resession;
 /**
  * Manages and manipulates session data with built in security.
  *
- * @version	2.1.1
+ * @version	3.0.0
  * @package	mjohnson.resession
  */
 class Resession {

@@ -1,4 +1,4 @@
-# Resession v2.1.1 #
+# Resession v3.0.0 #
 
 A class that manages and manipulates session data. Upon class instantiation all recommended ini settings are set based upon a defined security level.
 

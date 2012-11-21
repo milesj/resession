@@ -20,5 +20,5 @@
 	"autoload": {
 		"psr-0": { "mjohnson\\resession": "" }
 	},
-	"target-dir": "resession"
+	"target-dir": "mjohnson/resession"
 }
