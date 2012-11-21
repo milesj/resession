@@ -1,16 +1,18 @@
 <?php
 /**
- * Resession
- *
- * Manages and manipulates session data with built in security.
- *
- * @version		2.1.1
- * @author 		Miles Johnson - http://milesj.me
- * @copyright	Copyright 2006-2011, Miles Johnson, Inc.
- * @license 	http://opensource.org/licenses/mit-license.php - Licensed under The MIT License
+ * @copyright	Copyright 2006-2012, Miles Johnson - http://milesj.me
+ * @license		http://opensource.org/licenses/mit-license.php - Licensed under the MIT License
  * @link		http://milesj.me/code/php/resession
  */
 
+namespace mjohnson\resession;
+
+/**
+ * Manages and manipulates session data with built in security.
+ *
+ * @version	2.1.1
+ * @package	mjohnson.resession
+ */
 class Resession {
 
 	/**
@@ -99,7 +101,7 @@ class Resession {
 				$_SESSION = array();
 			}
 
-			return false;
+			return;
 		} else {
 			session_start();
 		}
@@ -113,7 +115,7 @@ class Resession {
 	 *
 	 * @access public
 	 * @param array|string $key
-	 * @return Resession
+	 * @return \mjohnson\resession\Resession
 	 * @chainable
 	 */
 	public function clear($key) {
@@ -162,7 +164,7 @@ class Resession {
 	public function get($key = null) {
 		$this->validate();
 
-		if (empty($key)) {
+		if (!$key) {
 			return $_SESSION;
 
 		} else if (strpos($key, '.')) {
@@ -216,7 +218,7 @@ class Resession {
 	 * @access public
 	 * @param string $key
 	 * @param mixed $value
-	 * @return Resession
+	 * @return \mjohnson\resession\Resession
 	 * @chainable
 	 */
 	public function set($key, $value) {

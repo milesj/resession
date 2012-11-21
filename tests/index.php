@@ -1,12 +1,7 @@
 <?php
 /**
- * Resession
- *
- * Manages and manipulates session data with built in security.
- *
- * @author 		Miles Johnson - http://milesj.me
- * @copyright	Copyright 2006-2011, Miles Johnson, Inc.
- * @license 	http://opensource.org/licenses/mit-license.php - Licensed under The MIT License
+ * @copyright	Copyright 2006-2012, Miles Johnson - http://milesj.me
+ * @license		http://opensource.org/licenses/mit-license.php - Licensed under the MIT License
  * @link		http://milesj.me/code/php/resession
  */
 
@@ -14,22 +9,21 @@
 error_reporting(E_ALL);
 
 function debug($var) {
-	echo '<pre>'. print_r($var, true) .'</pre>';
+	echo '<pre>' . print_r($var, true) . '</pre>';
 }
 
 // Include class and instantiate
-include_once '../resession/Resession.php';
+include_once '../Resession.php';
 
-$session = new Resession(array(
-	'security' => Resession::SECURITY_HIGH
+$session = new \mjohnson\resession\Resession(array(
+	'security' => \mjohnson\resession\Resession::SECURITY_HIGH
 ));
 
 // Set some data; allows for two levels deep
 $session
 	->set('foo', 'bar')
 	->set('key', 'value')
-	->set('class.name', 'resession')
-	->set('class.version', $session->version);
+	->set('class.name', 'resession');
 
 // Get the ID
 debug($session->id());

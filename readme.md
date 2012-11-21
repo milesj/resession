@@ -4,7 +4,8 @@ A class that manages and manipulates session data. Upon class instantiation all 
 
 ## Requirements ##
 
-* PHP 5.2.x
+* PHP 5.3+ - v3.x
+* PHP 5.2+ - v2.x
 
 ## Features ##
 

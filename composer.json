@@ -12,12 +12,13 @@
 		}
 	],
 	"require": {
-		"php": ">=5.2"
+		"php": ">=5.3"
 	},
 	"support": {
 		"source": "https://github.com/milesj/php-resession"
 	},
 	"autoload": {
-		"psr-0": { "mjohnson\\Resession": "" }
-	}
+		"psr-0": { "mjohnson\\resession": "" }
+	},
+	"target-dir": "resession"
 }
