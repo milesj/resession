@@ -15,7 +15,7 @@
 		"php": ">=5.3"
 	},
 	"support": {
-		"source": "https://github.com/milesj/php-resession"
+		"source": "https://github.com/milesj/resession"
 	},
 	"autoload": {
 		"psr-0": { "mjohnson\\resession": "" }
